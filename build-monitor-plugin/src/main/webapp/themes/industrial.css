@@ -109,7 +109,7 @@ h2 {
 }
 
 .build-monitor .unknown    { background-color:#474747; }
-.build-monitor .successful { background-color:darkgreen; }
+.build-monitor .successful { background-color: var(--success-color); }
 .build-monitor .unstable   { background-color:#f59400; }
 .build-monitor .failing    { background-color:darkred; }
 /* same grey background because in each case there's no visibility of what's wrong with the build */
@@ -222,7 +222,7 @@ h2 {
     display:none;
 }
 
-.dashboard { background: url('industrial/background.png'); }
+/*.dashboard { background: url('industrial/background.png'); }*/
 
 .build-monitor #widgets.empty em {
     padding:5em 0 0 0;
