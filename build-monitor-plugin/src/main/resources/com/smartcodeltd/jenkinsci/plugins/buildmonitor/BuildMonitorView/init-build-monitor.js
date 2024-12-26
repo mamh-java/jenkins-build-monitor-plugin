@@ -13,7 +13,7 @@
         proxyProvider.configureProxiesUsing(window.bindings);
 
         cookieJarProvider.describe({
-            label: 'buildMonitor.' + hashCodeOf(document.body.dataset.displayName)
+            label: 'buildMonitor.' + hashCodeOf(document.querySelector("#body").dataset.displayName)
         });
     });
 })();
