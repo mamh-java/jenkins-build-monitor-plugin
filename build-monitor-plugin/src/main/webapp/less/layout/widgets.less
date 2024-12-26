@@ -10,18 +10,15 @@
   .justify-content(space-between);
 
   list-style-type: none;
-  margin: 4px 0 -4px -6px;
+  margin: 0;
   padding:0;
+  gap: var(--section-padding);
 
   &>li {
     .flex(1);
 
     //overflow: auto;
     overflow: visible;
-  }
-
-  &>li {
-    margin: 0 0 8px 8px;
   }
 
   &.columns-1>li { .flex(( 100%       )); }

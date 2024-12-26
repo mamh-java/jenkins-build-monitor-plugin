@@ -63,7 +63,7 @@ h1,h2,h3,h4,h5,h6 {
     text-shadow: 2px 2px rgba(0,0,0,0.5);
 }
 h2 {
-    text-shadow: 1px 1px rgba(0,0,0,0.5);
+    text-shadow: 0 0 1px rgba(0,0,0,0.5);
 }
 
 .build-monitor a {
@@ -80,25 +80,10 @@ h2 {
     text-decoration: underline;
 }
 
-.build-monitor header h1 {
-    margin:10px auto 0 auto;
-    display:block;
-}
-
-.build-monitor header a.home-link {
-    position: absolute;
-    top:  5px;
-    left: 8px;
-    z-index:2;
-    background: url('industrial/jenkins-logo.png') no-repeat;
-    background-size: 100%;
-    width: 50px;  /* 100 */
-    height: 69px; /* 138 */
-    text-indent: -100%;
-    text-decoration: none;
-    white-space: nowrap;
-    overflow: hidden;
-}
+/*.build-monitor header h1 {*/
+/*    !*margin:10px auto 0 auto;*!*/
+/*    !*display:block;*!*/
+/*}*/
 
 .build-monitor h2 {
     margin-bottom: 0.1em;
@@ -108,10 +93,10 @@ h2 {
     margin: 0 0 0.5em 0;
 }
 
-.build-monitor .unknown    { background-color:#474747; }
+.build-monitor .unknown    { background-color: color-mix(in srgb, var(--text-color-secondary) 25%, transparent); }
 .build-monitor .successful { background-color: var(--success-color); }
-.build-monitor .unstable   { background-color:#f59400; }
-.build-monitor .failing    { background-color:darkred; }
+.build-monitor .unstable   { background-color: var(--warning-color); }
+.build-monitor .failing    { background-color: var(--error-color); }
 /* same grey background because in each case there's no visibility of what's wrong with the build */
 .build-monitor .aborted,
 .build-monitor .disabled   { background-color:grey; }
@@ -121,6 +106,7 @@ h2 {
  * Striped background patterns inspired by Lea Verou
  * http://lea.verou.me/2010/12/checkered-stripes-other-background-patterns-with-css3-gradients/
  */
+.build-monitor .unknown,
 .build-monitor .disabled,
 .build-monitor .successful,
 .build-monitor .unstable,
@@ -129,6 +115,7 @@ h2 {
     -webkit-background-size: 50px 50px;
     -moz-background-size:    50px 50px;
     background-size:         50px 50px; /* Controls the size of the stripes */
+    border: 1.5px solid rgb(255 255 255 / 0.05);
 }
 
 
@@ -222,7 +209,9 @@ h2 {
     display:none;
 }
 
-.dashboard { background: url('industrial/background.png'); }
+.dashboard {
+    background: #000;
+}
 
 .build-monitor #widgets.empty em {
     padding:5em 0 0 0;
@@ -297,15 +286,15 @@ h2 {
     border-radius: 5px;
 }
 
-.build-monitor nav label {
-    width:100%;
-}
-.build-monitor nav li.settings-option {
-    margin-top:2em;
-}
-.build-monitor nav li.buttons {
-    margin-top:2em;
-}
+/*.build-monitor nav label {*/
+/*    width:100%;*/
+/*}*/
+/*.build-monitor nav li.settings-option {*/
+/*    margin-top:2em;*/
+/*}*/
+/*.build-monitor nav li.buttons {*/
+/*    margin-top:2em;*/
+/*}*/
 
 .build-monitor nav li:last-child {
     padding:1em 0 1em 0;

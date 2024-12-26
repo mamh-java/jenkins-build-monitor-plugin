@@ -6,12 +6,8 @@
         <j:set var="angularVersion" value="1.5.8" />
 
         <l:header>
-            <link rel="stylesheet" href="${resourcesURL}/styles/normalize.css"/>
-            <link rel="stylesheet" href="${resourcesURL}/styles/bootstrap-combined.2.3.2.min.css"/>
-            <link rel="stylesheet" href="${resourcesURL}/vendor/angular-slider-5.4.0/rzslider.min.css"/>
-
-            <link rel="stylesheet" href="${resourcesURL}/themes/industrial.css"/>
-            <link rel="stylesheet" href="${resourcesURL}/styles/index.css"/>
+            <link rel="stylesheet" href="${resourcesURL}/themes/industrial.css?random=${h.generateId()}"/>
+            <link rel="stylesheet" href="${resourcesURL}/styles/index.css?random=${h.generateId()}"/>
 
             <script src="${resourcesURL}/vendor/angular-${angularVersion}/angular.min.js"></script>
             <script src="${resourcesURL}/vendor/angular-${angularVersion}/angular-sanitize.min.js"></script>
